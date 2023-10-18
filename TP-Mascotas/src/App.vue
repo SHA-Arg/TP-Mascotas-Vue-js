@@ -1,15 +1,39 @@
-<script setup>
-const name = "Vue dinamico";
-const styleColor = "color: red";
-</script>
-
 <template>
-	<h1>Hola {{ name }}</h1>
-	<h2 :style="styleColor">Soy Rojo</h2>
-</template>
+	<div class="contenedor">
+		<div class="login_logo">
+			<img
+				style="width: 150px; height: 150px"
+				src="./assets/img/logo.png"
+				alt="Logo" />
+		</div>
+		<div class="login_formulario">
+			<form action="login.php" method="POST">
+				<h2>Iniciar Sesión</h2>
 
-<style>
-h1 {
-	color: blue;
-}
-</style>
+				<div class="input-contenedor">
+					<span class="material-symbols-outlined">mail</span>
+					<input type="text" name="usuario" id="usuario" required />
+					<label for="usuario">Correo o CI</label>
+				</div>
+				<div class="input-contenedor">
+					<span class="material-symbols-outlined">lock</span>
+					<input type="password" name="password" id="password" required />
+					<label for="password">Contraseña</label>
+				</div>
+
+				<div class="recuperar">
+					<label for="#">
+						<input type="checkbox" name="r" id="" />Recordar!
+						<a href="#"> ¿Olvidaste tu contraseña?</a>
+					</label>
+				</div>
+			</form>
+
+			<button class="ingresar">Acceder</button>
+
+			<div class="crear_cuenta">
+				<p>¿No tienes una cuenta? <a href="#">Registrate</a></p>
+			</div>
+		</div>
+	</div>
+</template>
